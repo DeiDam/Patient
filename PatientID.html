@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient ID Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="id-card">
+        <div class="header">
+            <img src="logo.png" alt="Hospital Logo" class="logo">
+        </div>
+        <div class="details">
+            <p><strong>OP NUMBER:</strong> <?php echo $patient['op_number']; ?></p>
+            <p><strong>PATIENT NAME:</strong> <?php echo $patient['patient_name']; ?></p>
+            <p><strong>SEX:</strong> <?php echo $patient['sex']; ?> 
+                <strong>DOB:</strong> <?php echo ($patient['dob'] != 'N/A') ? date("d-m-Y", strtotime($patient['dob'])) : 'N/A'; ?>
+            </p>
+        </div>
+        <div class="footer">
+            <div class="icon">
+                <img src="location_icon.png" alt="Location">
+            </div>
+            <div class="icon">
+                <img src="phone_icon.png" alt="Phone">
+            </div>
+        </div>
+        <div class="id-card-label">PATIENT ID CARD</div>
+    </div>
+</body>
+</html>
